@@ -98,6 +98,7 @@
       padding-right: 0px;
       padding-top: 5px;
       margin: 0;
+      margin-left: 8px;
       overflow: hidden;
       background-color: #f0f0f0;
       position: fixed;
@@ -148,6 +149,15 @@
 
     li a:hover:not(.active) {
       background-color: #d4d4d4;
+    }
+
+    li:hover {
+      background-color: #d4d4d4;
+    }
+
+    li:hover img.icon {
+      filter: brightness(0.6);
+      /* Add filter to the icon to make it slightly darker on hover */
     }
 
     img.icon {
@@ -213,24 +223,30 @@
       height: 20px;
     }
 
-    li:hover {
-      background-color: #d4d4d4;
-    }
 
-    li:hover img.icon {
-      filter: brightness(0.6);
-      /* Add filter to the icon to make it slightly darker on hover */
-    }
 
     .container {
       text-align: left;
       padding: 5px;
       background-color: #e8e8e8;
       width: 976px;
-      height: 101px;
+      height: 115px;
       position: relative;
       /* Add some space between containers */
       margin-top: 10px;
+      /* Set initial transparent border */
+      border: 2px solid transparent;
+      /* Include border and padding in the total width and height */
+      box-sizing: border-box;
+    }
+
+    .container:hover {
+      border: 2px solid #4e8abf;
+
+    }
+
+    .container:hover web {
+      color: #4e8abf;
     }
 
     .container img {
@@ -241,6 +257,16 @@
 
     .img-and-info {
       display: flex;
+    }
+
+    .info {
+      flex-grow: 1;
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      color: black;
+      padding-top: 5px;
+      padding-right: 20px;
     }
 
     .weather-info {
@@ -256,15 +282,7 @@
       margin-left: 20px;
     }
 
-    .info {
-      flex-grow: 1;
-      padding-left: 10px;
-      display: flex;
-      flex-direction: column;
-      color: black;
-      padding-top: 5px;
-      padding-right: 20px;
-    }
+
 
 
     web {
